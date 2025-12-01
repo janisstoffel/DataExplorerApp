@@ -1,0 +1,15 @@
+# Ignore Data
+CSV Data/
+__CSV Data/
+*.zip
+*.txt
+.DS_Store
+
+# Ignore Virtual Env and PyCache
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+dist/
+build/
+*.spec
