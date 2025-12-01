@@ -19,11 +19,13 @@ jobs:
         cache: 'pip'
         
     - name: Install Dependencies (CPU Only)
+      working-directory: ./Data_Explorer_App
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements_cpu.txt
         
     - name: Build with PyInstaller
+      working-directory: ./Data_Explorer_App
       run: |
         pyinstaller build_windows.spec
         
@@ -31,4 +33,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: DataExplorer_Windows
-        path: dist/DataExplorer
+        path: Data_Explorer_App/dist/DataExplorer
