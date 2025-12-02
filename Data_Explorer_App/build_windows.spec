@@ -11,7 +11,9 @@ excluded_modules = [
     'pytz', 'babel',
     # NEW: Exclude unused data science/system libraries
     'sklearn', 'PIL', 'openpyxl', 'xlrd', 'xlsxwriter', 'sqlalchemy', 
-    'lxml', 'curses', 'distutils', 'setuptools', 'pkg_resources'
+    'lxml', 'curses', 'distutils', 'setuptools', 'pkg_resources',
+    # NEW: Exclude ML libraries since ML page is removed
+    'torch', 'torch_geometric', 'scipy'
 ]
 
 a = Analysis(
@@ -22,7 +24,7 @@ a = Analysis(
         ('src/assets', 'src/assets'),
         ('src/pages', 'src/pages'),
         # Include the model file
-        ('src/utils/phantom_gnn_model.pth', 'src/utils')
+        # ('src/utils/phantom_gnn_model.pth', 'src/utils') # Removed ML model
     ],
     hiddenimports=[
         'dash',
@@ -32,7 +34,7 @@ a = Analysis(
         'scipy.spatial',
         # 'sklearn.neighbors', # Removed as sklearn is excluded
         # Add torch if your GNN uses it, otherwise remove
-        'torch' 
+        # 'torch' # Removed ML dependency
     ],
     hookspath=[],
     hooksconfig={},
