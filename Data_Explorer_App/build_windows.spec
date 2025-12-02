@@ -6,7 +6,7 @@ block_cipher = None
 excluded_modules = [
     'matplotlib', 'tkinter', 'tcl', 'tk', 'ipython', 'jupyter', 
     'notebook', 'nbconvert', 'nbformat', 'jedi', 'docutils', 
-    'pygments', 'sqlite3', 'test', 'unittest', 'pydoc', 'email',
+    'pygments', 'sqlite3', 'test', 'unittest', 'pydoc',
     # NEW: Exclude timezone and language databases to save thousands of files
     'pytz', 'babel',
     # NEW: Exclude unused data science/system libraries
@@ -31,7 +31,7 @@ a = Analysis(
         'dash_bootstrap_components',
         'pandas',
         'plotly',
-        'scipy.spatial',
+        # 'scipy.spatial', # Removed as ML page is disabled
         # 'sklearn.neighbors', # Removed as sklearn is excluded
         # Add torch if your GNN uses it, otherwise remove
         # 'torch' # Removed ML dependency
