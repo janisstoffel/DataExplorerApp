@@ -2,8 +2,5 @@ dash
 pandas
 plotly
 dash-bootstrap-components
-Pillow
 numpy
-torch
-torch-geometric
 pyinstaller
