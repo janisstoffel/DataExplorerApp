@@ -6,7 +6,9 @@ block_cipher = None
 excluded_modules = [
     'matplotlib', 'tkinter', 'tcl', 'tk', 'ipython', 'jupyter', 
     'notebook', 'nbconvert', 'nbformat', 'jedi', 'docutils', 
-    'pygments', 'sqlite3', 'test', 'unittest', 'pydoc', 'email'
+    'pygments', 'sqlite3', 'test', 'unittest', 'pydoc', 'email',
+    # NEW: Exclude timezone and language databases to save thousands of files
+    'pytz', 'babel'
 ]
 
 a = Analysis(
