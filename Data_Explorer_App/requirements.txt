@@ -6,3 +6,4 @@ Pillow
 numpy
 torch
 torch-geometric
+pyinstaller
