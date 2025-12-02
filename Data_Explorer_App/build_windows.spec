@@ -8,7 +8,10 @@ excluded_modules = [
     'notebook', 'nbconvert', 'nbformat', 'jedi', 'docutils', 
     'pygments', 'sqlite3', 'test', 'unittest', 'pydoc', 'email',
     # NEW: Exclude timezone and language databases to save thousands of files
-    'pytz', 'babel'
+    'pytz', 'babel',
+    # NEW: Exclude unused data science/system libraries
+    'sklearn', 'PIL', 'openpyxl', 'xlrd', 'xlsxwriter', 'sqlalchemy', 
+    'lxml', 'curses', 'distutils', 'setuptools', 'pkg_resources'
 ]
 
 a = Analysis(
@@ -27,7 +30,7 @@ a = Analysis(
         'pandas',
         'plotly',
         'scipy.spatial',
-        'sklearn.neighbors',
+        # 'sklearn.neighbors', # Removed as sklearn is excluded
         # Add torch if your GNN uses it, otherwise remove
         'torch' 
     ],
